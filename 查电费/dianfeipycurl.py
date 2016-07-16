@@ -1,8 +1,8 @@
-# -*- coding: cp936 -*-
+ï»¿# -*- coding: cp936 -*-
 # -*- coding: gb18030 -*- 
 # -*- coding: utf-8 -*-
 
-#±¾³ÌÐò²éÑ¯ËÞÉáµç·Ñ£¬pycurl¶ÁÈ¡ÍøÖ·¶ÔÓ¦µÄjson¸ñÊ½Êý¾Ý£¬body.index('string')Ñ°ÕÒÎÒÃÇ¹ØÐÄµÄ×Ö·û´®£¬ÓÃµ½»ù±¾µÄurllib¡¢xml¡¢ÒÔ¼°StringIO°ü¡£
+#æœ¬ç¨‹åºæŸ¥è¯¢å®¿èˆç”µè´¹ï¼Œpycurlè¯»å–ç½‘å€å¯¹åº”çš„jsonæ ¼å¼æ•°æ®ï¼Œbody.index('string')å¯»æ‰¾æˆ‘ä»¬å…³å¿ƒçš„å­—ç¬¦ä¸²ï¼Œç”¨åˆ°åŸºæœ¬çš„urllibã€xmlã€ä»¥åŠStringIOåŒ…ã€‚
 
 import pycurl
 import urllib
@@ -43,25 +43,24 @@ print title.decode('utf-8')
 syvalue_index=body.index("tdSYValue")
 #print syvalue_index
 syvalue=body[syvalue_index+21:syvalue_index+33]
-print "1. Ê£ÓàµçÁ¿£º"
+print "1. å‰©ä½™ç”µé‡ï¼š"
 print syvalue.decode('utf-8')
 
 tdValueTime_index=body.index("tdValueTime")
 tdValueTime=body[tdValueTime_index+23:tdValueTime_index+42]
-print "2. ³­±íÊ±¼ä"
+print "2. æŠ„è¡¨æ—¶é—´"
 print tdValueTime.decode('utf-8')
 
-#text = '1ÔÂ'
+#text = '1æœˆ'
 #text = unicode( text, 'gbk' ).encode( 'gb18030' )
 #text_index=body.index(text)
 #print text.decode('gbk')
 
-## ÔËÐÐ½á¹ûÈçÏÂ
+## è¿è¡Œç»“æžœå¦‚ä¸‹
 ##
 ##>>> 
-##»ªÖÐ¿Æ¼¼´óÑ§.²©Ê¿Éú¹«Ô¢.²©Ê¿Éú¹«Ô¢Èý¶°.²©3-913
-##1. Ê£ÓàµçÁ¿£º
-##86.53¶È\u00
-##2. ³­±íÊ±¼ä
+##1. å‰©ä½™ç”µé‡ï¼š
+##86.53åº¦\u00
+##2. æŠ„è¡¨æ—¶é—´
 ##2016/7/13 11:37:04\
 ##>>> 
